@@ -1,0 +1,44 @@
+---
+layout: runbook
+title: '#4471 split · two causes in one ticket'
+owner: support desk
+status: accepted
+reviewed: 2026-10-28
+signature: v1.eyJzdWIiOiIzNDYwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMDkzOTksImV4cCI6MTc5MzI5NTc5OX0.zp6rcgCLSSK87zfGPnzWnfydvLnoUzlN7_V8I3i9JfM
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  export let signature;
+</script>
+
+Desk ticket **#4471** held **412** reports about wrong days on invites. Intake tagged almost all of them
+`parser`, and the page called it one bug. The export disagrees: **two causes** share that pile.
+
+<Callout>
+Split #4471 into one engineering ticket per cause. Count each cause once.
+</Callout>
+
+## What was merged into #4471
+
+<CauseTable ticket={4471} />
+
+## What we opened
+
+| cause | reports | what it is | desk ticket |
+| --- | ---: | --- | --- |
+| `parser` | **379** | Day-first tenants; the shared parser still reads month first, so days flip. | [GitHub issue #1](https://github.com/percy3k6/mega-dev-s01e03/issues/1) |
+| `hint` | **33** | Day-first tenants on **booking-v3**; the form shows `MM/DD/YYYY` so people type month first and the tenant parser reads it their way — a different failure mode. | [GitHub issue #2](https://github.com/percy3k6/mega-dev-s01e03/issues/2) |
+
+Five reports in the `parser` group were read as a one-day move (`desk-notes.json`); they stay filed
+under `parser` by tenant locale, not under `hint`.
+
+## Lessons
+
+- Subject-line dedupe is fast; it does not know locale or form version. Re-read a big ticket with `CauseTable` before you call it one bug.
+- Intake tags are guesses. The cause comes from tenant locale + channel + form (`causes.ts`).
+
+<RenderStamp {signature} />
