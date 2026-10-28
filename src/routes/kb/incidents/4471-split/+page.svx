@@ -4,7 +4,7 @@ title: '#4471 split · two causes in one ticket'
 owner: support desk
 status: accepted
 reviewed: 2026-10-28
-signature: v1.eyJzdWIiOiIzNDYwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTA3NjcsImV4cCI6MTc5MzI5NzE2N30.JIzLZxidrlinUg3Naw5_9rX88XTGfFV9Y3iutQcdszU
+signature: v1.eyJzdWIiOiIzNDYwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTA5ODEsImV4cCI6MTc5MzI5NzM4MX0.hS9frtp7RfW2JHQahQhouMFrBsdvipmIQhatEfq4nFE
 ---
 
 <script>
