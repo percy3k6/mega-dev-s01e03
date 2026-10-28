@@ -18,10 +18,10 @@ Since April, people have told us their bookings land on the wrong day: a month f
 **Merged as one issue.** The parser reads dates month first, and our tenants write the day
 first. The fix is queued.
 
-See [split write-up](/kb/incidents/4471-split): two causes were filed in GitHub (**379** `parser`, **33** `hint`).
+See [split write-up](/kb/incidents/4471-split): two causes; **#4471 closed 05 Oct** — parser **FIXED**, hint **WON'T FIX** (booking-v3 retired).
 
 <Callout>
-Known. Split filed; engineering tickets tracked in GitHub.
+Closed 05 Oct. Parser fix shipped; hint closed — booking-v3 retired.
 </Callout>
 
 ## What was merged

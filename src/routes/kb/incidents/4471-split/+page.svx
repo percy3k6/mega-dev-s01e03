@@ -36,6 +36,15 @@ Split #4471 into one engineering ticket per cause. Count each cause once.
 Five reports in the `parser` group were read as a one-day move (`desk-notes.json`); they stay filed
 under `parser` by tenant locale, not under `hint`.
 
+## Engineering update · #4471 closed 05 Oct
+
+| cause | reports | outcome | note |
+| --- | ---: | --- | --- |
+| `parser` | **379** | **FIXED** | `fix(dates): parse dd/mm for eu locales` |
+| `hint` | **33** | **WON'T FIX** | booking-v3 form retired |
+
+GitHub **#1** closed **completed** (fix shipped). GitHub **#2** closed **not planned** (form retired).
+
 ## Lessons
 
 - Subject-line dedupe is fast; it does not know locale or form version. Re-read a big ticket with `CauseTable` before you call it one bug.
