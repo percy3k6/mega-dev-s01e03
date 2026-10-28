@@ -30,7 +30,7 @@ Split #4471 into one engineering ticket per cause. Count each cause once.
 
 | cause | reports | what it is | desk ticket |
 | --- | ---: | --- | --- |
-| `parser` | **379** | Day-first tenants; the shared parser still reads month first, so days flip. | [GitHub issue #1](https://github.com/percy3k6/mega-dev-s01e03/issues/1) |
+| `parser` | **379** | Day-first tenants; the shared parser still reads month first, so days flip. | Desk **#4471** (this incident) |
 | `hint` | **33** | Day-first tenants on **booking-v3**; the form shows `MM/DD/YYYY` so people type month first and the tenant parser reads it their way — a different failure mode. | [GitHub issue #2](https://github.com/percy3k6/mega-dev-s01e03/issues/2) |
 
 Five reports in the `parser` group were read as a one-day move (`desk-notes.json`); they stay filed
