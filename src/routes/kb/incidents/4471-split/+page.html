@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="signature" content="v1.eyJzdWIiOiIzNDYwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTA5ODEsImV4cCI6MTc5MzI5NzM4MX0.hS9frtp7RfW2JHQahQhouMFrBsdvipmIQhatEfq4nFE" />
+  <title>#4471 split · two causes in one ticket · support kb</title>
+  <style>
+    :root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a66; --line:#e3e0d8; --accent:#2f6f5e; --warn:#b4501f; --warn-bg:#fbeee6; --note-bg:#eef5f2; --mono:ui-monospace,Menlo,monospace; }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,sans-serif; }
+    .kb { max-width:760px; margin:0 auto; padding:2rem 16px 4rem; }
+    table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+    th, td { border-bottom:1px solid var(--line); padding:.35rem .5rem; text-align:left; }
+    code { font-family:var(--mono); font-size:.88em; }
+    .callout { background:var(--note-bg); padding:.75rem 1rem; border-radius:6px; }
+    .stamp { margin:2rem 0 0; font:.85rem var(--mono); color:var(--muted); }
+    .stamp b { color:var(--accent); letter-spacing:.04em; }
+    .wrong td { background:var(--warn-bg); }
+  </style>
+</head>
+<body>
+  <div class="kb">
+    <header>
+      <p style="font:.8rem var(--mono);color:var(--muted)">support desk · kb</p>
+      <h1>#4471 split · two causes in one ticket</h1>
+      <p style="color:var(--muted);font-size:.85rem">owner <b>support desk</b> · status <b>accepted</b> · reviewed 2026-10-28</p>
+    </header>
+    <main>
+      <p>Desk ticket <strong>#4471</strong> held <strong>412</strong> reports about wrong days on invites. Intake tagged almost all of them <code>parser</code>, and the page called it one bug. The export disagrees: <strong>two causes</strong> share that pile.</p>
+      <p class="callout">Split #4471 into one engineering ticket per cause. Count each cause once.</p>
+      <h2>What was merged into #4471</h2>
+      <p><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p>
+      <table>
+        <thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><code>parser</code></td><td>379</td><td>parser ×379</td><td>11</td><td>#4471</td></tr>
+          <tr class="wrong"><td><code>hint</code></td><td>33</td><td>parser ×33</td><td>4</td><td>not this ticket — no ticket of its own</td></tr>
+        </tbody>
+      </table>
+      <h2>What we opened</h2>
+      <table>
+        <thead><tr><th>cause</th><th>reports</th><th>what it is</th><th>desk ticket</th></tr></thead>
+        <tbody>
+          <tr><td><code>parser</code></td><td><strong>379</strong></td><td>Day-first tenants; shared parser reads month first.</td><td>GitHub issue #1</td></tr>
+          <tr><td><code>hint</code></td><td><strong>33</strong></td><td>booking-v3 MM/DD hint on day-first tenants.</td><td>GitHub issue #2</td></tr>
+        </tbody>
+      </table>
+      <h2>Engineering update · #4471 closed 05 Oct</h2>
+      <table>
+        <thead><tr><th>cause</th><th>reports</th><th>outcome</th><th>note</th></tr></thead>
+        <tbody>
+          <tr><td><code>parser</code></td><td><strong>379</strong></td><td><strong>FIXED</strong></td><td><code>fix(dates): parse dd/mm for eu locales</code></td></tr>
+          <tr><td><code>hint</code></td><td><strong>33</strong></td><td><strong>WON'T FIX</strong></td><td>booking-v3 form retired</td></tr>
+        </tbody>
+      </table>
+      <p>GitHub <strong>#1</strong> closed <strong>completed</strong> (fix shipped). GitHub <strong>#2</strong> closed <strong>not planned</strong> (form retired).</p>
+    </main>
+    <p class="stamp">desk ref <b>DR-JWZS-YTN6</b></p>
+  </div>
+</body>
+</html>
